@@ -1,0 +1,15 @@
+/.vs/
+/*.suo
+/*.Tests/Content/
+/*.Sample/Content/
+node_modules/
+/build/
+/packages/
+/tools/packages/
+bin/
+obj/
+/.fake/
+/paket-files/
+.vscode/
+.idea/
+*.user

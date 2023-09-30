@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <WebSharperProject>Bundle</WebSharperProject>
+    <WebSharperBundleOutputDir>Content</WebSharperBundleOutputDir>
+    <WebSharperSourceMap>false</WebSharperSourceMap>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Client.fs" />
+    <Content Include="index.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebSharper.Bindings.IndexedDB\WebSharper.Bindings.IndexedDB.fsproj" />
+    <ProjectReference Include="..\WebSharper.IndexedDB\WebSharper.IndexedDB.fsproj" />
+  </ItemGroup>
+  <Import Project="..\.paket\Paket.Restore.targets" />
+
+</Project>
