@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
-    <WebSharperProject>binding</WebSharperProject>
+    <WebSharperProject>library</WebSharperProject>
     <WebSharperSourceMap>false</WebSharperSourceMap>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Product>WebSharper.IndexedDB</Product>
@@ -10,8 +10,12 @@
     <Company>IntelliFactory</Company>
     <Copyright>(c) 2023 IntelliFactory</Copyright>
   </PropertyGroup>
+
   <ItemGroup>
-    <Compile Include="Main.fs" />
+    <Compile Include="Library.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebSharper.IndexedDB\WebSharper.IndexedDB.fsproj" />
   </ItemGroup>
   <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>

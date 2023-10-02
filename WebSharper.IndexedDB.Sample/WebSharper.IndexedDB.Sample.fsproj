@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WebSharper.Bindings.IndexedDB\WebSharper.Bindings.IndexedDB.fsproj" />
     <ProjectReference Include="..\WebSharper.IndexedDB\WebSharper.IndexedDB.fsproj" />
+    <ProjectReference Include="..\WebSharper.IndexedDB.Extensions\WebSharper.IndexedDB.Extensions.fsproj" />
   </ItemGroup>
   <Import Project="..\.paket\Paket.Restore.targets" />
 
