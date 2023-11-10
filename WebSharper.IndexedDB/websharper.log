@@ -1,10 +1,10 @@
-2023-10-27 09:54:35.3038|DEBUG|Program|location of wsfscservice is: C:\Users\runneradmin\.nuget\packages\websharper.fsharp\7.0.3.355-beta2\tools\net6.0\win-x64 (server side)
-2023-10-27 09:54:35.3315|DEBUG|Program|pipename is: C:\Users\runneradmin\.nuget\packages\websharper.fsharp\7.0.3.355-beta2\tools\net6.0\win-x64 (server side)
-2023-10-27 09:54:35.3315|DEBUG|Program|Compiling D:\a\build-script\build-script\w3c-indexeddb\WebSharper.IndexedDB\WebSharper.IndexedDB.fsproj
-2023-10-27 09:54:40.5959|TRACE|Program|Server sends: n: F# compilation: 00:00:05.3569937
-2023-10-27 09:54:40.7028|TRACE|Program|Server sends: n: Loading IExtension implementation: 00:00:00.1114427
-2023-10-27 09:54:40.8403|TRACE|Program|Server sends: n: Getting Assembly definition: 00:00:00.1374634
-2023-10-27 09:54:41.3132|TRACE|Program|Server sends: n: Built assembly: 00:00:00.4729228
-2023-10-27 09:54:41.8722|TRACE|Program|Server sends: n: Creating WebSharper metadata: 00:00:00.5589898
-2023-10-27 09:54:42.0250|TRACE|Program|Server sends: n: Writing final dll: 00:00:00.1528407
-2023-10-27 09:54:42.0250|TRACE|Program|Server sends: x: 0
+2023-11-10 16:25:56.0508|DEBUG|Program|location of wsfscservice is: C:\Users\runneradmin\.nuget\packages\websharper.fsharp\7.0.3.364-beta3\tools\net6.0\win-x64 (server side)
+2023-11-10 16:25:56.0697|DEBUG|Program|pipename is: C:\Users\runneradmin\.nuget\packages\websharper.fsharp\7.0.3.364-beta3\tools\net6.0\win-x64 (server side)
+2023-11-10 16:25:56.0697|DEBUG|Program|Compiling D:\a\build-script\build-script\w3c-indexeddb\WebSharper.IndexedDB\WebSharper.IndexedDB.fsproj
+2023-11-10 16:25:59.6399|TRACE|Program|Server sends: n: F# compilation: 00:00:03.6356553
+2023-11-10 16:25:59.7169|TRACE|Program|Server sends: n: Loading IExtension implementation: 00:00:00.0802991
+2023-11-10 16:25:59.7663|TRACE|Program|Server sends: n: Getting Assembly definition: 00:00:00.0494005
+2023-11-10 16:26:00.0754|TRACE|Program|Server sends: n: Built assembly: 00:00:00.3091010
+2023-11-10 16:26:00.4374|TRACE|Program|Server sends: n: Creating WebSharper metadata: 00:00:00.3620416
+2023-11-10 16:26:00.5415|TRACE|Program|Server sends: n: Writing final dll: 00:00:00.1040255
+2023-11-10 16:26:00.5415|TRACE|Program|Server sends: x: 0

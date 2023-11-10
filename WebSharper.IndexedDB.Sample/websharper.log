@@ -1,23 +1,23 @@
-2023-10-27 09:54:46.1875|DEBUG|Program|location of wsfscservice is: C:\Users\runneradmin\.nuget\packages\websharper.fsharp\7.0.3.355-beta2\tools\net6.0\win-x64 (server side)
-2023-10-27 09:54:46.1875|DEBUG|Program|pipename is: C:\Users\runneradmin\.nuget\packages\websharper.fsharp\7.0.3.355-beta2\tools\net6.0\win-x64 (server side)
-2023-10-27 09:54:46.1875|DEBUG|Program|Compiling D:\a\build-script\build-script\w3c-indexeddb\WebSharper.IndexedDB.Sample\WebSharper.IndexedDB.Sample.fsproj
-2023-10-27 09:54:46.1875|TRACE|Program|Server sends: e: WebSharper warning WS9002: Please use "spa" instead of "Bundle" for your project type
-2023-10-27 09:54:47.6288|TRACE|Program|Server sends: n: F# compilation: 00:00:01.4448470
-2023-10-27 09:54:48.5551|TRACE|Program|Server sends: n: Checking project: 00:00:00.9263761
-2023-10-27 09:54:48.5551|TRACE|Program|Server sends: n: Waiting on merged metadata: 00:00:00.0009317
-2023-10-27 09:54:48.6743|TRACE|Program|Server sends: n: Parsing with FCS: 00:00:00.1183044
-2023-10-27 09:54:48.6743|TRACE|Program|Server sends: n: Analyzing function arguments: 00:00:00.0007598
-2023-10-27 09:54:48.6933|TRACE|Program|Server sends: n: Resolving names: 00:00:00.0182406
-2023-10-27 09:54:48.8167|TRACE|Program|Server sends: n: WebSharper translation: 00:00:00.1233246
-2023-10-27 09:54:48.8167|TRACE|Program|Server sends: n: Source position transformations: 00:00:00.0019333
-2023-10-27 09:54:48.8269|TRACE|Program|Server sends: n: Packaging assembly: 00:00:00.0082788
-2023-10-27 09:54:48.9638|TRACE|Program|Server sends: n: Writing WebSharper.IndexedDB.Sample.Client.Person.js: 00:00:00.1369370
-2023-10-27 09:54:48.9638|TRACE|Program|Server sends: n: Writing WebSharper.IndexedDB.Sample.Client.js: 00:00:00.0007600
-2023-10-27 09:54:48.9638|TRACE|Program|Server sends: n: Writing $StartupCode_Client.js: 00:00:00.0004540
-2023-10-27 09:54:48.9638|TRACE|Program|Server sends: n: Writing $EntryPoint.js: 00:00:00.0003366
-2023-10-27 09:54:48.9638|TRACE|Program|Server sends: n: Writing .d.ts files: 00:00:00.0049736
-2023-10-27 09:54:48.9638|TRACE|Program|Server sends: n: Hashing resources: 00:00:00.0006603
-2023-10-27 09:54:49.1210|TRACE|Program|Server sends: n: Serializing metadata: 00:00:00.1499566
-2023-10-27 09:54:49.1210|TRACE|Program|Server sends: n: Writing resources into assembly: 00:00:00.0085174
-2023-10-27 09:54:49.5154|TRACE|Program|Server sends: n: Bundling: 00:00:00.3859560
-2023-10-27 09:54:49.5154|TRACE|Program|Server sends: x: 0
+2023-11-10 16:26:03.3949|DEBUG|Program|location of wsfscservice is: C:\Users\runneradmin\.nuget\packages\websharper.fsharp\7.0.3.364-beta3\tools\net6.0\win-x64 (server side)
+2023-11-10 16:26:03.3949|DEBUG|Program|pipename is: C:\Users\runneradmin\.nuget\packages\websharper.fsharp\7.0.3.364-beta3\tools\net6.0\win-x64 (server side)
+2023-11-10 16:26:03.3949|DEBUG|Program|Compiling D:\a\build-script\build-script\w3c-indexeddb\WebSharper.IndexedDB.Sample\WebSharper.IndexedDB.Sample.fsproj
+2023-11-10 16:26:03.3949|TRACE|Program|Server sends: e: WebSharper warning WS9002: Please use "spa" instead of "Bundle" for your project type
+2023-11-10 16:26:04.2938|TRACE|Program|Server sends: n: F# compilation: 00:00:00.9468360
+2023-11-10 16:26:04.7126|TRACE|Program|Server sends: n: Checking project: 00:00:00.4187591
+2023-11-10 16:26:04.7136|TRACE|Program|Server sends: n: Waiting on merged metadata: 00:00:00.0010164
+2023-11-10 16:26:04.7922|TRACE|Program|Server sends: n: Parsing with FCS: 00:00:00.0786203
+2023-11-10 16:26:04.7922|TRACE|Program|Server sends: n: Analyzing function arguments: 00:00:00.0009169
+2023-11-10 16:26:04.7922|TRACE|Program|Server sends: n: Resolving names: 00:00:00.0131706
+2023-11-10 16:26:04.8916|TRACE|Program|Server sends: n: WebSharper translation: 00:00:00.0853120
+2023-11-10 16:26:04.8916|TRACE|Program|Server sends: n: Source position transformations: 00:00:00.0016300
+2023-11-10 16:26:04.8916|TRACE|Program|Server sends: n: Packaging assembly: 00:00:00.0065162
+2023-11-10 16:26:04.9452|TRACE|Program|Server sends: n: Writing WebSharper.IndexedDB.Sample.Client.Person.js: 00:00:00.0455139
+2023-11-10 16:26:04.9452|TRACE|Program|Server sends: n: Writing WebSharper.IndexedDB.Sample.Client.js: 00:00:00.0008364
+2023-11-10 16:26:04.9452|TRACE|Program|Server sends: n: Writing $StartupCode_Client.js: 00:00:00.0003387
+2023-11-10 16:26:04.9452|TRACE|Program|Server sends: n: Writing $EntryPoint.js: 00:00:00.0003118
+2023-11-10 16:26:04.9503|TRACE|Program|Server sends: n: Writing .d.ts files: 00:00:00.0036262
+2023-11-10 16:26:04.9503|TRACE|Program|Server sends: n: Hashing resources: 00:00:00.0005946
+2023-11-10 16:26:05.2444|TRACE|Program|Server sends: n: Serializing metadata: 00:00:00.2934572
+2023-11-10 16:26:05.2444|TRACE|Program|Server sends: n: Writing resources into assembly: 00:00:00.0063935
+2023-11-10 16:26:05.3976|TRACE|Program|Server sends: n: Bundling: 00:00:00.1467775
+2023-11-10 16:26:05.3976|TRACE|Program|Server sends: x: 0
