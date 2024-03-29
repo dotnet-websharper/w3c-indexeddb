@@ -1,18 +1,18 @@
-2024-03-22 13:32:50.4008|DEBUG|Program|location of wsfscservice is: C:\Users\runneradmin\.nuget\packages\websharper.fsharp\7.0.6.443-beta5\tools\net6.0\win-x64 (server side)
-2024-03-22 13:32:50.4008|DEBUG|Program|pipename is: C:\Users\runneradmin\.nuget\packages\websharper.fsharp\7.0.6.443-beta5\tools\net6.0\win-x64 (server side)
-2024-03-22 13:32:50.4008|DEBUG|Program|Compiling D:\a\build-script\build-script\w3c-indexeddb\WebSharper.IndexedDB.Extensions\WebSharper.IndexedDB.Extensions.fsproj
-2024-03-22 13:32:51.2703|TRACE|Program|Server sends: n: F# compilation: 00:00:00.8698362
-2024-03-22 13:32:51.9615|TRACE|Program|Server sends: n: Checking project: 00:00:00.6916479
-2024-03-22 13:32:51.9615|TRACE|Program|Server sends: n: Waiting on merged metadata: 00:00:00.0015528
-2024-03-22 13:32:52.1462|TRACE|Program|Server sends: n: Parsing with FCS: 00:00:00.1831136
-2024-03-22 13:32:52.1462|TRACE|Program|Server sends: n: Analyzing function arguments: 00:00:00.0022579
-2024-03-22 13:32:52.1892|TRACE|Program|Server sends: n: Resolving names: 00:00:00.0407359
-2024-03-22 13:32:52.3070|TRACE|Program|Server sends: n: WebSharper translation: 00:00:00.1178495
-2024-03-22 13:32:52.3183|TRACE|Program|Server sends: n: Source position transformations: 00:00:00.0112922
-2024-03-22 13:32:52.3609|TRACE|Program|Server sends: n: Packaging assembly: 00:00:00.0425998
-2024-03-22 13:32:52.4120|TRACE|Program|Server sends: n: Writing WebSharper.IndexedDB.Extensions.js: 00:00:00.0510607
-2024-03-22 13:32:52.4298|TRACE|Program|Server sends: n: Writing .d.ts files: 00:00:00.0178297
-2024-03-22 13:32:52.4298|TRACE|Program|Server sends: n: Hashing resources: 00:00:00.0027408
-2024-03-22 13:32:52.4298|TRACE|Program|Server sends: n: Serializing metadata: 00:00:00.0012050
-2024-03-22 13:32:52.4591|TRACE|Program|Server sends: n: Writing resources into assembly: 00:00:00.0253707
-2024-03-22 13:32:52.4591|TRACE|Program|Server sends: x: 0
+2024-03-29 07:55:18.6214|DEBUG|Program|location of wsfscservice is: C:\Users\runneradmin\.nuget\packages\websharper.fsharp\7.0.6.447-beta5\tools\net6.0\win-x64 (server side)
+2024-03-29 07:55:18.6214|DEBUG|Program|pipename is: C:\Users\runneradmin\.nuget\packages\websharper.fsharp\7.0.6.447-beta5\tools\net6.0\win-x64 (server side)
+2024-03-29 07:55:18.6214|DEBUG|Program|Compiling D:\a\build-script\build-script\w3c-indexeddb\WebSharper.IndexedDB.Extensions\WebSharper.IndexedDB.Extensions.fsproj
+2024-03-29 07:55:19.4946|TRACE|Program|Server sends: n: F# compilation: 00:00:00.8737939
+2024-03-29 07:55:20.2111|TRACE|Program|Server sends: n: Checking project: 00:00:00.7168519
+2024-03-29 07:55:20.2111|TRACE|Program|Server sends: n: Waiting on merged metadata: 00:00:00.0014042
+2024-03-29 07:55:20.3953|TRACE|Program|Server sends: n: Parsing with FCS: 00:00:00.1827401
+2024-03-29 07:55:20.3976|TRACE|Program|Server sends: n: Analyzing function arguments: 00:00:00.0023118
+2024-03-29 07:55:20.4444|TRACE|Program|Server sends: n: Resolving names: 00:00:00.0468026
+2024-03-29 07:55:20.5711|TRACE|Program|Server sends: n: WebSharper translation: 00:00:00.1267087
+2024-03-29 07:55:20.5836|TRACE|Program|Server sends: n: Source position transformations: 00:00:00.0125362
+2024-03-29 07:55:20.6230|TRACE|Program|Server sends: n: Packaging assembly: 00:00:00.0393966
+2024-03-29 07:55:20.6758|TRACE|Program|Server sends: n: Writing WebSharper.IndexedDB.Extensions.js: 00:00:00.0527871
+2024-03-29 07:55:20.7002|TRACE|Program|Server sends: n: Writing .d.ts files: 00:00:00.0243437
+2024-03-29 07:55:20.7002|TRACE|Program|Server sends: n: Hashing resources: 00:00:00.0024880
+2024-03-29 07:55:20.7002|TRACE|Program|Server sends: n: Serializing metadata: 00:00:00.0015923
+2024-03-29 07:55:20.7292|TRACE|Program|Server sends: n: Writing resources into assembly: 00:00:00.0249335
+2024-03-29 07:55:20.7292|TRACE|Program|Server sends: x: 0
