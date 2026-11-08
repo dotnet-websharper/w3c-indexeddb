@@ -1,0 +1,234 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f6f7fb;
+  --surface: #ffffff;
+  --border: #e2e5ee;
+  --text: #1c2230;
+  --muted: #5b6472;
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --primary-text: #ffffff;
+  --code-bg: #f1f2f7;
+  --shadow: 0 1px 2px rgba(16, 24, 40, 0.06), 0 8px 24px rgba(16, 24, 40, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1420;
+    --surface: #171d2b;
+    --border: #2a3348;
+    --text: #e7eaf2;
+    --muted: #9aa4b8;
+    --primary: #7c74f5;
+    --primary-hover: #918bff;
+    --primary-text: #0f1420;
+    --code-bg: #101725;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 12px 32px rgba(0, 0, 0, 0.35);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 20px 64px;
+}
+
+.hero h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  letter-spacing: -0.02em;
+}
+
+.hero .lede {
+  margin: 0 0 32px;
+  color: var(--muted);
+  max-width: 60ch;
+}
+
+.hero a {
+  color: var(--primary);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+}
+
+.card .hint {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+textarea {
+  width: 100%;
+  min-height: 84px;
+  resize: vertical;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+}
+
+textarea:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  padding: 9px 18px;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease, transform 120ms ease;
+}
+
+.btn:hover {
+  border-color: var(--primary);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary-text);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.preview {
+  margin: 14px 0 0;
+  padding: 12px 14px;
+  min-height: 48px;
+  overflow: auto;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.status {
+  margin: 4px 0 0;
+  font-weight: 600;
+}
+
+.capabilities {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.event {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+code {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 0 5px;
+  font-size: 0.85em;
+}
+
+.directory {
+  margin: 14px 0 0;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.entries {
+  margin: 12px 0 0;
+  padding-left: 20px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9rem;
+}
+
+.entries li {
+  margin: 2px 0;
+}
+
+/* IndexedDB-specific: the progress log and its tables. */
+.progress {
+  margin-top: 16px;
+}
+
+.progress h2 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.progress h3 {
+  margin: 12px 0 6px;
+  font-size: 1rem;
+}
+
+.progress table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0;
+  font-size: 0.9rem;
+}
+
+.progress th,
+.progress td {
+  padding: 6px 8px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.progress th {
+  font-weight: 600;
+}
+
+.progress tr:nth-child(even) {
+  background: var(--code-bg);
+}
