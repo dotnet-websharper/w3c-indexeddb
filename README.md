@@ -101,7 +101,7 @@ python3 -m http.server -d WebSharper.IndexedDB.Sample 8102
 ```
 
 Open <http://localhost:8102/>. The page runs the sample automatically, shows the progress log and the
-`getAll` query result, and lets you run it again.
+`getAll` query result, and deletes the database at the end.
 
 ## Building from source
 
