@@ -22,6 +22,25 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
+      - name: Install Paket as a .NET Tool
+        run: dotnet tool restore
+
+      - name: Add credentials for Paket
+        run: dotnet paket config add-credentials https://nuget.pkg.github.com/dotnet-websharper/index.json --username intellifactory-gh --password ${{ secrets.PAT_PACKAGE }}
+
+      - name: Add GitHub registry NuGet source
+        run: dotnet nuget add source https://nuget.pkg.github.com/dotnet-websharper/index.json --name github --username intellifactory-gh --password ${{ secrets.PAT_PACKAGE }} --store-password-in-clear-text
+
+      - name: Prime Paket Git cache for build-script
+        run: |
+          cache="$HOME/.paket/git/db/build-script"
+          rm -rf "$cache"
+          mkdir -p "$(dirname "$cache")"
+          git clone --mirror https://github.com/dotnet-websharper/build-script "$cache"
+
+      - name: Restore dependencies using Paket
+        run: dotnet paket restore
+
       - name: Build sample in Release
         run: dotnet build WebSharper.IndexedDB.Sample/WebSharper.IndexedDB.Sample.fsproj --configuration Release
 

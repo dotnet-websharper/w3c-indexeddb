@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <WebSharperProject>library</WebSharperProject>
@@ -10,18 +10,11 @@
     <Company>IntelliFactory</Company>
     <Copyright>(c) 2023 IntelliFactory</Copyright>
   </PropertyGroup>
-
   <ItemGroup>
     <Compile Include="Library.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebSharper.IndexedDB\WebSharper.IndexedDB.fsproj" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="WebSharper" Version="10.1.10.687" />
-    <PackageReference Include="WebSharper.FSharp" Version="10.1.10.687" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Update="FSharp.Core" Version="10.1.403" />
-  </ItemGroup>
+  <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>

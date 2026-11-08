@@ -1,5 +1,5 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <WebSharperProject>Bundle</WebSharperProject>
@@ -7,26 +7,14 @@
     <WebSharperSourceMap>false</WebSharperSourceMap>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
-
   <ItemGroup>
     <Compile Include="Client.fs" />
     <Content Include="index.html" />
     <Content Include="site.css" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\WebSharper.IndexedDB\WebSharper.IndexedDB.fsproj" />
     <ProjectReference Include="..\WebSharper.IndexedDB.Extensions\WebSharper.IndexedDB.Extensions.fsproj" />
   </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="WebSharper" Version="10.1.10.687" />
-    <PackageReference Include="WebSharper.FSharp" Version="10.1.10.687" />
-    <PackageReference Include="WebSharper.UI" Version="10.1.8.687" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Update="FSharp.Core" Version="10.1.403" />
-  </ItemGroup>
-
+  <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>
