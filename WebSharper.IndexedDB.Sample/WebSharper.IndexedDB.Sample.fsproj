@@ -1,22 +1,20 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFramework>net10.0</TargetFramework>
     <WebSharperProject>Bundle</WebSharperProject>
     <WebSharperBundleOutputDir>Content</WebSharperBundleOutputDir>
     <WebSharperSourceMap>false</WebSharperSourceMap>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
-
   <ItemGroup>
     <Compile Include="Client.fs" />
     <Content Include="index.html" />
+    <Content Include="site.css" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\WebSharper.IndexedDB\WebSharper.IndexedDB.fsproj" />
     <ProjectReference Include="..\WebSharper.IndexedDB.Extensions\WebSharper.IndexedDB.Extensions.fsproj" />
   </ItemGroup>
   <Import Project="..\.paket\Paket.Restore.targets" />
-
 </Project>

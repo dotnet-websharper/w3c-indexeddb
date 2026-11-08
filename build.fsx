@@ -5,6 +5,8 @@
 #r "nuget: Fake.DotNet.Cli"
 #r "nuget: Fake.DotNet.AssemblyInfoFile"
 #r "nuget: Fake.DotNet.Paket"
+#r "nuget: Paket.Core, 12.0.0-alpha001"
+#r "nuget: MSBuild.StructuredLogger"
 
 open Fake.Core
 System.Environment.GetCommandLineArgs()
@@ -13,7 +15,6 @@ System.Environment.GetCommandLineArgs()
 |> Fake.Core.Context.FakeExecutionContext.Create false __SOURCE_FILE__
 |> Fake.Core.Context.RuntimeContext.Fake
 |> Fake.Core.Context.setExecutionContext
-
 
 #load "paket-files/wsbuild/github.com/dotnet-websharper/build-script/WebSharper.Fake.fsx"
 open Fake.Core

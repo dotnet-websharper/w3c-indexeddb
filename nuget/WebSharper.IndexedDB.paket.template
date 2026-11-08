@@ -6,19 +6,17 @@ owners
     IntelliFactory
 repositoryType git
 repositoryUrl https://github.com/dotnet-websharper/w3c-indexeddb/
-licenseUrl https://github.com/dotnet-websharper/w3c-indexeddb/blob/master/LICENSE.md
+licenseUrl https://github.com/dotnet-websharper/w3c-indexeddb/blob/main/LICENSE.md
 iconUrl https://github.com/dotnet-websharper/core/raw/websharper50/tools/WebSharper.png
 projectUrl https://github.com/dotnet-websharper/w3c-indexeddb
 description
-    WebSharper bindings for the W3C IndexedDB API
+    WebSharper bindings for IndexedDB
 tags
     Web JavaScript F# C#
 files
-    ../WebSharper.IndexedDB/bin/Release/netstandard2.0/WebSharper.IndexedDB.dll ==> lib/netstandard2.0
-    ../WebSharper.IndexedDB/bin/Release/netstandard2.0/WebSharper.IndexedDB.websharper ==> lib/netstandard2.0
-    ../WebSharper.IndexedDB/bin/Release/netstandard2.0/WebSharper.IndexedDB.xml ==> lib/netstandard2.0
     ../WebSharper.IndexedDB.Extensions/bin/Release/netstandard2.0/WebSharper.IndexedDB.Extensions.dll ==> lib/netstandard2.0
-    ../WebSharper.IndexedDB.Extensions/bin/Release/netstandard2.0/WebSharper.IndexedDB.Extensions.websharper ==> lib/netstandard2.0
     ../WebSharper.IndexedDB.Extensions/bin/Release/netstandard2.0/WebSharper.IndexedDB.Extensions.xml ==> lib/netstandard2.0
+    ../WebSharper.IndexedDB/bin/Release/netstandard2.0/WebSharper.IndexedDB.dll ==> lib/netstandard2.0
+    ../WebSharper.IndexedDB/bin/Release/netstandard2.0/WebSharper.IndexedDB.xml ==> lib/netstandard2.0
 dependencies
         WebSharper ~> LOCKEDVERSION:[3]
