@@ -15,8 +15,10 @@ tags
     Web JavaScript F# C#
 files
     ../WebSharper.IndexedDB.Extensions/bin/Release/netstandard2.0/WebSharper.IndexedDB.Extensions.dll ==> lib/netstandard2.0
+    ../WebSharper.IndexedDB.Extensions/bin/Release/netstandard2.0/WebSharper.IndexedDB.Extensions.websharper ==> lib/netstandard2.0
     ../WebSharper.IndexedDB.Extensions/bin/Release/netstandard2.0/WebSharper.IndexedDB.Extensions.xml ==> lib/netstandard2.0
     ../WebSharper.IndexedDB/bin/Release/netstandard2.0/WebSharper.IndexedDB.dll ==> lib/netstandard2.0
+    ../WebSharper.IndexedDB/bin/Release/netstandard2.0/WebSharper.IndexedDB.websharper ==> lib/netstandard2.0
     ../WebSharper.IndexedDB/bin/Release/netstandard2.0/WebSharper.IndexedDB.xml ==> lib/netstandard2.0
 dependencies
         WebSharper ~> LOCKEDVERSION:[3]
