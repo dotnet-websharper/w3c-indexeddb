@@ -4,84 +4,86 @@ open WebSharper
 open WebSharper.IndexedDB
 open WebSharper.JavaScript
 open WebSharper.UI
+open WebSharper.UI.Notation
 open WebSharper.UI.Client
-open WebSharper.UI.Server
 open WebSharper.UI.Html
+open WebSharper.UI.Templating
 
 [<JavaScript>]
 module Client =
-    
+    // The template is loaded from the DOM, so editing index.html and refreshing
+    // the browser is enough; a rebuild is only needed when holes change.
+    type IndexTemplate = Template<"index.html", ClientLoad.FromDocument>
+
     type Person = {
         Name: string
         Age: uint
     }
 
+    let progressList = Var.Create<Doc list> [ h2 [] [ text "IndexedDB insert + remove sample" ] ]
+    let status = Var.Create "Ready."
 
-    let progressList = Var.Create<Doc list> [h2 [] [text "DB Insert+Remove sample"]]
-
-    let updateProgressList doc = progressList.Update (fun l -> List.insertAt (l.Length-1) doc l)
-    let updateProgress msg = 
+    let updateProgressList doc = progressList.Update (fun l -> List.insertAt (l.Length - 1) doc l)
+    let updateProgress msg =
         Console.Log msg
-        
-        progressList.Update (fun l -> List.insertAt (l.Length-1) (div [] [text msg]) l)
+        status := msg
+        progressList.Update (fun l -> List.insertAt (l.Length - 1) (div [] [ text msg ]) l)
 
     let logDatabases msg =
         let prom = promise {
             updateProgress msg
             let! dbs = JS.Window.IndexedDB.Databases()
-            
-            if dbs = null || dbs.Length = 0 then 
-                div [] [text "No databases found."]
+
+            if dbs = null || dbs.Length = 0 then
+                div [] [ text "No databases found." ]
             else
                 table [] [
                     tr [] [
-                        th [] [text "Name"]
-                        th [] [text "Version"]
+                        th [] [ text "Name" ]
+                        th [] [ text "Version" ]
                     ]
                     yield! dbs |> Array.map (fun dbinfo ->
                         tr [] [
-                            td [] [text dbinfo.Name]
-                            td [] [text <| $"%i{dbinfo.Version}"]
+                            td [] [ text dbinfo.Name ]
+                            td [] [ text <| $"%i{dbinfo.Version}" ]
                         ]
                     )
                 ]
             |> updateProgressList
-
         }
-        prom.Catch(fun exn -> 
-            updateProgressList <| div [] [text $"Error: {exn}"]
+        prom.Catch(fun exn ->
+            updateProgressList <| div [] [ text $"Error: {exn}" ]
             Console.Error exn)
-    [<SPAEntryPoint>]
-    let Main () =
-        logDatabases "Initial database list: " |> ignore
+
+    let run () =
         try
             let dbEvt = JS.Window.IndexedDB.Open("db1", As<uint32> 1)
             dbEvt.Onupgradeneeded <- (fun e ->
                 let db1 = dbEvt.Result
-                
+
                 if e?oldVersion < 1 then
                     let keyPath = nameof(Unchecked.defaultof<Person>.Name)
-                    let store1 = 
+                    let store1 =
                         db1
-                            .CreateObjectStore("store1", 
-                            IDBObjectStore.CreateOptions(
-                                KeyPath=keyPath,
-                                AutoIncrement=false
-                            ))
+                            .CreateObjectStore("store1",
+                                IDBObjectStore.CreateOptions(
+                                    KeyPath=keyPath,
+                                    AutoIncrement=false
+                                ))
                             .CreateIndex("personName", keyPath, IDBObjectStore.IndexOptions(Unique=false))
                             .ObjectStore
 
                     // adding individual objects
-                    store1.Add({Name="Philip";Age=As<uint> 35}) |> ignore
-                    store1.Add({Name="Joe"; Age=As<uint> 17}) |> ignore
-                    
+                    store1.Add({ Name="Philip"; Age=As<uint> 35 }) |> ignore
+                    store1.Add({ Name="Joe"; Age=As<uint> 17 }) |> ignore
+
                     // mini boilerplate to add Seq types
                     [|
-                        {Name="Lucy"; Age=As<uint> 24}
-                        {Name="Matt"; Age=As<uint> 19}
-                        {Name="Anna"; Age=As<uint> 44}
+                        { Name="Lucy"; Age=As<uint> 24 }
+                        { Name="Matt"; Age=As<uint> 19 }
+                        { Name="Anna"; Age=As<uint> 44 }
                     |] |> Array.map (store1.Add) |> ignore
-                    
+
                     updateProgress """Initialized database and added members to "store1" """
                     logDatabases "Database list after db1 init: " |> ignore
             )
@@ -92,41 +94,42 @@ module Client =
                 ))
                 let transactionQuery = transaction.ObjectStore("store1").GetAll<Person>()
                 transactionQuery.Onsuccess <- (fun e ->
-                    
-                    updateProgressList <| h3 [] [text "GetAll query test below: "]
+                    updateProgressList <| h3 [] [ text "GetAll query test below: " ]
                     updateProgressList <| table [] [
                         tr [] [
-                            th [] [text "Name"]
-                            th [] [text "Age"]
+                            th [] [ text "Name" ]
+                            th [] [ text "Age" ]
                         ]
                         yield! transactionQuery.Result |> Array.map (fun person ->
                             tr [] [
-                                td [] [text person.Name]
-                                td [] [text <| $"%i{person.Age}"]
+                                td [] [ text person.Name ]
+                                td [] [ text <| $"%i{person.Age}" ]
                             ]
                         )
                     ]
                 )
-                //transaction.
                 transaction.Oncomplete <- (fun e ->
                     Console.Log "Transaction completed"
                     let delEvt = JS.Window.IndexedDB.DeleteDatabase("db1")
 
                     delEvt.Onblocked <- (fun e ->
-                        updateProgressList <| div [] [text "On database deletion, you have to listen to its onblocked event instead of onsuccess"]
+                        updateProgressList <| div [] [ text "On database deletion, you have to listen to its onblocked event instead of onsuccess" ]
                         logDatabases "After test database deletion : " |> ignore
                     )
                     delEvt.Onerror <- (fun e ->
-                        updateProgressList <| div [] [text $"Error: {delEvt.Error}"]
+                        updateProgressList <| div [] [ text $"Error: {delEvt.Error}" ]
                     )
-                    
                 )
             )
         with
         | e -> Console.Error e
 
-        [
-            h1 [] [text "IndexedDB sample page"]
-            progressList.View |> Doc.BindSeqCached id
-        ] |> Doc.Concat
-        |> Doc.RunById "main"
+    [<SPAEntryPoint>]
+    let Main () =
+        logDatabases "Initial database list: " |> ignore
+        run ()
+
+        IndexTemplate()
+            .status(status.V)
+            .progress(Doc.BindSeqCached id progressList.View)
+            .Bind()

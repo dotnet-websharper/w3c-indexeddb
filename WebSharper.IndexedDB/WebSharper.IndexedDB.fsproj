@@ -13,5 +13,11 @@
   <ItemGroup>
     <Compile Include="Main.fs" />
   </ItemGroup>
-  <Import Project="..\.paket\Paket.Restore.targets" />
+  <ItemGroup>
+    <PackageReference Include="WebSharper" Version="10.1.10.687" />
+    <PackageReference Include="WebSharper.FSharp" Version="10.1.10.687" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="10.1.403" />
+  </ItemGroup>
 </Project>

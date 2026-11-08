@@ -1,0 +1,39 @@
+name: Build and Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Build sample in Release
+        run: dotnet build WebSharper.IndexedDB.Sample/WebSharper.IndexedDB.Sample.fsproj --configuration Release
+
+      - name: Prepare deployment
+        run: |
+          mkdir -p dist
+          cp WebSharper.IndexedDB.Sample/index.html dist/
+          cp WebSharper.IndexedDB.Sample/site.css dist/
+          cp -r WebSharper.IndexedDB.Sample/Content dist/
+
+      - name: Deploy 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist

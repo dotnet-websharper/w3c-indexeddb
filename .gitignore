@@ -6,11 +6,14 @@ node_modules/
 /build/
 /packages/
 /tools/packages/
-bin/
-obj/
+/bin/
+/obj/
 /.fake/
-/paket-files/
+/.config/
+/.paket/
 .vscode/
 .idea/
 *.user
 websharper.log
+/*/bin
+/*/obj
